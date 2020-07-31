@@ -69,10 +69,8 @@ export default function App() {
   return (
     <div className="App">
       <img
-        width="100"
-        height="100"
         alt="logo"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVKvGW_04tITbEzMo0lO41u6SCGA4KF3HReA&usqp=CAU"
+        src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100"
       />
       <h2>{`Hello ${user}`}</h2>
       {/* input componet */}
