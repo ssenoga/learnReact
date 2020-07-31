@@ -76,13 +76,15 @@ export default function App() {
       {/* input componet */}
       <form>
         {!isLoggedIn ? (
-          <FormControl>
+          <FormControl className="app__enterName">
             <InputLabel>Enter your name</InputLabel>
             <Input
+              className="app__inputForm"
               value={user}
               onChange={event => setUser(event.target.value)}
             />
             <Button
+              className="app__sendIcon"
               variant="contained"
               color="primary"
               type="submit"

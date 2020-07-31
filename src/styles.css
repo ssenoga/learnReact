@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.app__enterName {
+  display: flex !important;
+  flex-direction: row !important;
+}
 .app__form {
   padding: 20px;
   background: white;
