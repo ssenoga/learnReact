@@ -3,6 +3,8 @@ import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 
 import Message from "./components/Message/index";
 
+import db from "./utils/firebase";
+
 import "./styles.css";
 
 export default function App() {
@@ -11,8 +13,16 @@ export default function App() {
     { user: "user 1", message: "hello" },
     { user: "user 2", message: "tsap" }
   ]);
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState("eddy");
 
+  // for connecting to our firebase
+  useEffect(() => {
+    db.collection("messages").onSnapshot(snapshot => {
+      setMessages(snapshot.docs.map(doc => doc.data()));
+    });
+  }, []);
+
+  // for prompting username
   useEffect(() => {
     setUser(prompt("Enter your name"));
   }, []);
